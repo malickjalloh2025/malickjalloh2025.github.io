@@ -1,19 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma pagweb</title>
-    <!-- Lien vers le CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZ5BnbHfnmnK1x0D9rW11/t4y6Fqv1p5t6FQEj7qqc8GNI4DO2OTmE9u6C4S" crossorigin="anonymous">
+    <title>Marfaye Tech - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-<div class="container mt-5">
-    <h1 class="text-center mb-4">Bienvenue sur le site de Malick Jalloh</h1>
-    
-</div>
-<!-- Script JS de Bootstrap (facultatif pour les composants interactifs) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ppdXef4cJFTn48ehkzX+6ycc6nj04vjxGuQ9El75VXr35Q82CCwMAmfZp3Q3ptcc" crossorigin="anonymous"></script>
+<header class="bg-dark text-white text-center py-3">
+    <h1>Marfaye Tech - Cybersécurisation en Belgique</h1>
+    <p>Spécialistes en Pentesting, Audit et Correction des Vulnérabilités</p>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Accueil</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="services.html">Produits et Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bureaux.html">Nos Bureaux</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <section>
+        <h2>Bienvenue chez Marfaye Tech</h2>
+        <p>Marfaye Tech est votre partenaire de confiance pour assurer la sécurité de vos systèmes informatiques. Nous proposons des services professionnels de pentesting, d'audit de sécurité et de correction des vulnérabilités.</p>
+        <p>Notre mission est de protéger vos données sensibles et de garantir l'intégrité de vos infrastructures numériques.</p>
+    </section>
+
+    <section class="mt-5">
+        <h3>Nos Services Clés</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Pentesting</h4>
+                <p>Identifiez et éliminez les failles de sécurité avant qu'elles ne soient exploitées.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Audit de Sécurité</h4>
+                <p>Analyse approfondie pour garantir la conformité et la robustesse de vos systèmes.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Correction de Vulnérabilités</h4>
+                <p>Solutions rapides et efficaces pour résoudre les vulnérabilités détectées.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Marfaye Tech. Tous droits réservés.</p>
+    <p>Contact : <a href="mailto:info@marfayetech.be" class="text-white">info@marfayetech.be</a></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Exemple de script JavaScript pour dynamiser la navigation
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            alert("Navigation vers : " + link.textContent);
+        });
+    });
+</script>
 </body>
 </html>
